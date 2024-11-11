@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js"></script>
+    <title>Document</title>
+    <body>
+      <!-- Header -->
+      <header>
+        <input type="text" id="search-container" onkeyup="filterList()" autocomplete="off" />
+
+        <div class="menu">
+          <a onclick="filters('all')">All <span><%-testData.status.all %></span></a>
+          <a onclick="filters('passed')">Passed <span><%-testData.status.pass %></span></a>
+          <a onclick="filters('failed')">Failed <span><%-testData.status.failed %></span></a>
+          <a>Flaky <span><%-testData.status.flaky %></span></a>
+          <a>Skaipped <span><%-testData.status.skaipped %></span></a>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main>
+        <div id="infos">
+          <div>
+            <p>Project: <%- testData.browser %></p>
+          </div>
+          <div>
+            <p><%- testData.testDate %></p>
+            <p>Total time: <span><%- testData.testDuration %></span></p>
+          </div>
+        </div>
+        <div class="spec-container">
+          <div><%- testData.dynamicContent %></div>
+        </div>
+
+        <button class="generatePDF" onclick="generatePDF()">Exportar</button>
+      </main>
+    </body>
+  </head>
+</html>

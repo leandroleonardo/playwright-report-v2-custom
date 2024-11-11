@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: c9d1d9;
+  font-size: 16px;
+  margin: 20px 100px;
+  color: #dbdbdb;
+}
+
+h3 {
+  color: #4caf50;
+}
+
+p {
+  font-size: 14px;
+  font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.menu {
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.menu a {
+  border: 1px solid #3d3d3d;
+  padding: 8px;
+  font-weight: 600;
+}
+
+.menu a > span {
+  background-color: #424242;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.menu a:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.menu a:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.menu > p {
+  border-right: 1px solid rgb(58, 58, 58);
+}
+
+#search-container {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #424242;
+}
+
+#search-container:focus {
+  caret-color: #424242;
+  outline: none;
+  color: #a0a0a0;
+}
+
+#search-container:not(:focus) {
+  color: #a0a0a0;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+header input {
+  background: #010409;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  margin: 0 21px;
+}
+
+#infos {
+  display: flex;
+  justify-content: space-between;
+  color: #585858;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+#infos div {
+  display: flex;
+  gap: 10px;
+}
+
+.name-spec {
+  background-color: #161b22;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #3d3d3d;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.test {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  font-weight: 600;
+}
+
+.spec {
+  padding-top: 5px;
+  padding-left: 36px;
+  color: #585858;
+}
+
+.test-container {
+  padding: 10px 0;
+  border: 1px solid #3d3d3d;
+  border-top: none;
+}
+
+.test-container:hover {
+  background-color: #161b22;
+  cursor: pointer;
+}
+
+.spec-container .test-container:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.hidden-element {
+  display: none;
+}
+
+.generatePDF {
+  margin: 10px 3px;
+  padding: 5px;
+  background-color: #161b22;
+  border: 1px solid #3d3d3d;
+  color: #8b8b8b;
+  border-radius: 5px;
+  float: right;
+}
+
+.menu > a:hover {
+  background-color: #212831;
+  cursor: pointer;
+}
+
+.generatePDF:hover {
+  cursor: pointer;
+  background-color: #212831;
+}
+
+/* Config Print */
+
+@media print {
+  #search-container,
+  .generatePDF {
+    visibility: hidden;
+  }
+}
